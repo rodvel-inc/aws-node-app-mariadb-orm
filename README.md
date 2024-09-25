@@ -33,7 +33,7 @@ Ver diagrama [aquí](https://app.diagrams.net/#G1ewZY1-y-v4uMFKW-u6p_wjXcrFPBPU4
 
 ## Pasos Generales para Desplegar la Aplicación
 
-### 1. Instalar `node.js` y `npm`:
+1. **Instalar `node.js` y `npm`**:
 
  ```bash
 sudo apt update
@@ -56,7 +56,7 @@ cd /ruta/al/proyecto/aws-node-app-mariadb-orm
 npm install 
 ```
 		
-6. **Configurar variables de entorno:**
+5. **Configurar variables de entorno:**
 
 Editar el archivo `.env` con sus credenciales de base de datos y cualquier otro parámetro necesario:
 	
@@ -64,12 +64,12 @@ Editar el archivo `.env` con sus credenciales de base de datos y cualquier otro 
 nano .env
 ```
 
-7. **Instalar la base de datos:**
+6. **Instalar la base de datos:**
 ```bash
 sudo apt install mariadb-server
 ```
 
-8. **Crear la base de datos y su usuario:**
+7. **Crear la base de datos y su usuario:**
 
 - Desde el CLI, se debe ingresar al servidor recientemente instalado:
 
@@ -93,7 +93,7 @@ mysql> GRANT ALTER, CREATE, DELETE, DROP, INSERT, LOCK TABLES, SELECT, UPDATE ON
 ```bash
 mysql> FLUSH PRIVILEGES
 ```
-9. **Ejecutar el proyecto:**
+8. **Ejecutar el proyecto:**
 
 - Iniciar la aplicación web según lo configurado en el archivo `server.js`. Por defecto, el servidor debería escuchar por el puerto definido en el archivo `.env` o en un puerto predefinido :
 ```bash
@@ -103,7 +103,7 @@ npm start
 ```bash
 node server.js
 ```
-10. **Ejecutar la Aplicación Localmente:**
+9. **Ejecutar la Aplicación Localmente:**
 
 Abrir el navegador y visitar `http://localhost:PORT` para ver y probar la aplicación.
 
