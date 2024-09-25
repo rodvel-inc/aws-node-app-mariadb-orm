@@ -107,4 +107,46 @@ node server.js
 
 Abrir el navegador y visitar `http://localhost:PORT` para ver y probar la aplicación.
 
+10. **Agregar `nginx` como servidor web:**
+
+- Instalar `nginx`:
+```bash
+sudo apt install nginx -y
+```
+- Crear un directorio `ssl` en el directorio de `nginx` el cual contendrá un certificado digital SSL y la llave privada:
+```bash
+sudo mkdir /etc/nginx/ssl
+```
+- Generar un certificado SSL auto-firmado usando `openssl`:
+```bash
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/server.key -out /etc/nginx/ssl/server.crt
+```
+- Abrir el archivo de configuración de `nginx`:
+```bash
+sudo nano /etc/nginx/sites-available/default
+```
+- Editar el archivo:
+```bash
+server {
+  listen 443 ssl;
+  server_name _;
+
+  ssl_certificate /etc/nginx/ssl/server.crt;
+  ssl_certificate_key /etc/nginx/ssl/server.key;
+
+  location / {
+    proxy_pass http://localhost:3000;
+  }
+}
+```
+- Verificar el estado del servidor web:
+```bash
+systemctl status nginx.service
+```
+- Iniciar el servicio si no está iniciado:
+```bash
+sudo service nginx start
+```
+- Abrir el navegador y visitar `https://localhost` para ver y probar la aplicación.
+
 
