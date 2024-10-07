@@ -5,7 +5,7 @@
 Este reto tiene como objetivo aprender cómo desplegar la misma aplicación web básica construida con **Node.js**, ya desplegada en una máquina local, en un servidor AWS EC2.
 
 ## Diagrama de la aplicación
-Para este Reto, el diagrama es más *formal* o *estándar*. Se trata de un diagrama de despliegue de infraestructura. Lo puede consultar en el mismo enlace compartido para el Reto # 1, en la pestaña "Diagrama de Despliegue".
+Para este Reto, el diagrama es más *formal* o *estándar*. Se trata de un diagrama de despliegue de infraestructura. Lo puede consultar en el mismo enlace compartido para el Reto # 1, en la pestaña "Reto # 2".
 
 ## Servicios / Conceptos de AWS involucrados
 - **IAM**: Identity and Access Management.
