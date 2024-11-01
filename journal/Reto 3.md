@@ -63,7 +63,7 @@ A continuación, se enumeran los pasos generales que le permitirán lograr el ob
 - El *endpoint* `/add-user` de su *back-end* es una API RESTful porque:
    - Está relacionando un método HTTP específico (POST) con una acción específica.
    - Este método es una de las operaciones principales de un servicio RESTful, siguiendo el patrón de operaciones CRUD (Create, Read, Update, Delete),
-   - La comunicación es de tipo `Stateless`, lo cual quiere decir que cada solicitud del cliente al servidor debe contener toda la información que el servidor necesita para procesar la solicitud: la solicitud POST tiene los dos parámetros (name, email) que el servidor espera recibir para proceder a crear un usuario. 
+   - La comunicación es de tipo `Stateless`, lo cual quiere decir que cada solicitud del cliente al servidor debe contener toda la información que el servidor necesita para procesar la solicitud: la solicitud POST tiene los dos parámetros (name, email) que el servidor espera recibir para proceder a crear un usuario. Lo opuesto a "Stateless" sería "Stateful". "Stateful" quiere decir que el *back-end* tendría que guardar algún tipo de registro del estado de una interacción con el *front-end* para utilizarlo como contexto en una interacción posterior; por eso la palabra "stateful".
    - Los datos en el endpoint son enviados en formato JSON ({name, email}), el cual es usado para comunicaciones cliente - servidor en APIs REST.
    - Está usando métodos HTTP estándar
    - El diseño de las API RESTful está basado en recursos; los usuarios (representados por /add-user) son considerados recursos que pueden ser creados, recuperados, actualizados y eliminados.
